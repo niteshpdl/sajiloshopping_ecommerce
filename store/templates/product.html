@@ -92,4 +92,12 @@ $(document).on('click', '#add-cart', function(e){
     });
 })
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var productImage = document.querySelector('.card img');
+    if (productImage) {
+        console.log('Product Image URL:', productImage.src);
+    }
+});
+</script>
 {% endblock %}
