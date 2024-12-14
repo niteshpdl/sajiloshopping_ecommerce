@@ -122,7 +122,7 @@ def category(request, foo):
 
 
 def product(request, pk):
-    product = get_object_or_404(Product, id=pk)
+    product = get_object_or_404(Product, pk=pk)  # Use pk instead of id
     return render(request, 'product.html', {'product': product})
 
 
