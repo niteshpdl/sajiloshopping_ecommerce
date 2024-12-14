@@ -128,7 +128,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # You can keep this as is for loca
 
 # Cloudinary settings for media files
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dh5woyv9s',
+    'CLOUD_NAME': 'untitled',
     'API_KEY': '633598579816969',
     'API_SECRET': 'u49cpUP7kvbDN7yT2m2HDYMY-ss',
     'SECURE': True,
