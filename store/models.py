@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 # Create Customer Profile
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	date_modified = models.DateTimeField(User, auto_now=True)
+        date_modified = models.DateTimeField(auto_now=True)
 	phone = models.CharField(max_length=20, blank=True)
 	address1 = models.CharField(max_length=200, blank=True)
 	address2 = models.CharField(max_length=200, blank=True)
@@ -74,7 +74,7 @@ class Product(models.Model):
 	sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=10)
 
 	def __str__(self):
-		return self.name
+    		return self.name
 
 
 # Customer Orders
