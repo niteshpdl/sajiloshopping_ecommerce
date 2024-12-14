@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Category, Profile
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -121,9 +121,9 @@ def category(request, foo):
 		return redirect('home')
 
 
-def product(request,pk):
-	product = Product.objects.get(id=pk)
-	return render(request, 'product.html', {'product':product})
+def product(request, pk):
+    product = get_object_or_404(Product, id=pk)
+    return render(request, 'product.html', {'product': product})
 
 
 def home(request):
